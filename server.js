@@ -1,8 +1,14 @@
 const express = require('express')
+const cors = require('cors');
 const app = express()
 const port = process.env.PORT || 5000
 const dbConnection = require('./db')
 
+app.use(cors({
+    origin: 'https://car-rental-pi-ebon.vercel.app', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+}));
 
 app.use(express.json())
 
