@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+// car model
 const carSchema = new mongoose.Schema({
 
     name : {type : String , required : true} ,
